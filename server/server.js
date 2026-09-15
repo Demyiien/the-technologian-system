@@ -60,6 +60,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Technologian API listening on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Technologian server running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
