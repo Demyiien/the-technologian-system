@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasks — The Technologian</title>
+<link rel="icon" type="image/png" href="../assets/images/ttsp-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/tasks.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <header class="app-header">
+    <div class="header-left">
+      <button class="icon-btn mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/ttsp-logo.png" alt="The Technologian" class="brand-logo">
+        <span class="brand-text">The Technologian</span>
+      </a>
+    </div>
+
+    <div class="header-center">
+      <div class="global-search">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" placeholder="Search..." class="global-search-input" aria-label="Global search">
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn notification-btn" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="notification-dot"></span>
+      </button>
+
+      <div class="user-profile" id="userProfile">
+        <button class="user-profile-trigger" aria-haspopup="true" aria-expanded="false">
+          <span class="avatar avatar-sm">JD</span>
+          <span class="user-info">
+            <span class="user-name">Juan Dela Cruz</span>
+            <span class="user-role">Web Development</span>
+          </span>
+          <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown-menu user-dropdown" role="menu">
+          <a href="#" class="dropdown-item" role="menuitem">Profile</a>
+          <a href="#" class="dropdown-item" role="menuitem">Settings</a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" role="menuitem">Sign out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link" data-nav="dashboard">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+            <span class="nav-label">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="newsroom.html" class="nav-link" data-nav="newsroom">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H8l-4 4V4z"/></svg>
+            <span class="nav-label">Newsroom</span>
+          </a>
+          <ul class="nav-sublist">
+            <li class="nav-item">
+              <a href="writing.html" class="nav-link nav-link-sub" data-nav="writing">
+                <span class="nav-label">Writing</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="creatives.html" class="nav-link nav-link-sub" data-nav="creatives">
+                <span class="nav-label">Creatives</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="online-digital.html" class="nav-link nav-link-sub" data-nav="online-digital">
+                <span class="nav-label">Online &amp; Digital</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="requests.html" class="nav-link" data-nav="requests">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span class="nav-label">Requests</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="tasks.html" class="nav-link is-active" data-nav="tasks">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M8 12l3 3 5-6"/></svg>
+            <span class="nav-label">Tasks</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="calendar.html" class="nav-link" data-nav="calendar">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+            <span class="nav-label">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="notifications.html" class="nav-link" data-nav="notifications">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="nav-label">Notifications</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+    <div class="tasks">
+
+      <div class="tasks-header">
+        <div>
+          <h1>Tasks</h1>
+          <p class="tasks-subtitle">Every task across every cluster, in one pipeline.</p>
+        </div>
+        <button class="btn btn-primary" type="button" id="newTaskBtn">New Task</button>
+      </div>
+
+      <section class="dash-section">
+        <div class="metric-grid" id="tasksMetrics"></div>
+      </section>
+
+      <section class="dash-section">
+        <div class="tabs" id="taskViews">
+          <button class="tab is-active" data-view="all">All Tasks</button>
+          <button class="tab" data-view="mine">My Tasks</button>
+          <button class="tab" data-view="due-today">Due Today</button>
+          <button class="tab" data-view="upcoming">Upcoming</button>
+          <button class="tab" data-view="overdue">Overdue</button>
+          <button class="tab" data-view="completed">Completed</button>
+        </div>
+      </section>
+
+      <section class="dash-section">
+        <div class="tasks-toolbar">
+          <div class="global-search tasks-search">
+            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="taskSearch" placeholder="Search tasks..." class="global-search-input" aria-label="Search tasks">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="filterCluster">Cluster</label>
+            <select class="form-select" id="filterCluster">
+              <option value="all">All Clusters</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="filterPriority">Priority</label>
+            <select class="form-select" id="filterPriority">
+              <option value="all">All Priorities</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="filterAssignee">Assignee</label>
+            <select class="form-select" id="filterAssignee">
+              <option value="all">All Assignees</option>
+            </select>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="sortDeadlineBtn" type="button">Sort: Deadline</button>
+          <button class="btn btn-ghost btn-sm" id="clearFiltersBtn" type="button">Clear filters</button>
+        </div>
+
+        <p class="tasks-status-message" id="tasksStatusMessage" hidden></p>
+        <div class="task-board" id="taskBoard"></div>
+      </section>
+
+    </div>
+  </main>
+
+</div>
+
+<div class="modal-overlay" id="taskFormModalOverlay">
+  <div class="modal task-form-modal">
+    <div class="modal-header">
+      <h2 class="modal-title" id="taskFormTitle">New Task</h2>
+      <button class="icon-btn" id="taskFormClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id="taskForm">
+        <input type="hidden" id="formTaskId">
+        <div class="task-form-meta" id="taskFormMeta" hidden>
+          <span>Task ID: <strong id="taskMetaId"></strong></span>
+          <span>Created: <strong id="taskMetaCreated"></strong></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="formTitle">Title</label>
+          <input type="text" class="form-input" id="formTitle" placeholder="What needs to be done?" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="formDescription">Description</label>
+          <textarea class="form-textarea" id="formDescription" placeholder="Add any details or context..."></textarea>
+        </div>
+        <div class="detail-grid">
+          <div class="form-group">
+            <label class="form-label" for="formAssignee">Assignee</label>
+            <select class="form-select" id="formAssignee"></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="formCluster">Cluster</label>
+            <select class="form-select" id="formCluster"></select>
+          </div>
+        </div>
+        <div class="detail-grid">
+          <div class="form-group">
+            <label class="form-label" for="formPriority">Priority</label>
+            <select class="form-select" id="formPriority">
+              <option value="Low">Low</option>
+              <option value="Normal" selected>Normal</option>
+              <option value="High">High</option>
+              <option value="Urgent">Urgent</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="formStatus">Status</label>
+            <select class="form-select" id="formStatus">
+              <option value="Not Started" selected>Not Started</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Review">Review</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+        </div>
+        <div class="detail-grid">
+          <div class="form-group">
+            <label class="form-label" for="formDeadline">Deadline</label>
+            <input type="date" class="form-input" id="formDeadline">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="formReminder">Reminder</label>
+            <input type="text" class="form-input" id="formReminder" placeholder="e.g. Sep 9, 5:00 PM">
+          </div>
+        </div>
+        <div class="detail-grid">
+          <div class="form-group">
+            <label class="form-label" for="formArticle">Related Article</label>
+            <select class="form-select" id="formArticle">
+              <option value="">Not linked</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="formRequest">Related Request</label>
+            <select class="form-select" id="formRequest">
+              <option value="">Not linked</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer" style="padding:0;margin-top:var(--space-md);">
+          <p id="taskFormError" class="form-error" hidden style="color:var(--color-danger,#c0392b); margin:0 auto 0 0; font-size:0.875rem;">Failed to create task. Please try again.</p>
+          <button type="button" class="btn btn-ghost" id="taskFormDelete" hidden style="margin-right:auto;color:var(--color-danger);">Delete Task</button>
+          <button type="button" class="btn btn-ghost" id="taskFormCancel">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="taskFormSubmit">Create Task</button>
+        </div>
+      </form>
+
+      <div class="task-history-section" id="taskHistorySection" hidden>
+        <div class="detail-field-label" style="margin-bottom:var(--space-xs);">Activity History</div>
+        <div class="detail-list" id="taskHistoryList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/navigation.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/tasks.js"></script>
+</body>
+</html>

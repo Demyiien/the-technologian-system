@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online &amp; Digital Cluster — The Technologian</title>
+<link rel="icon" type="image/png" href="../assets/images/ttsp-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/online-digital.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <header class="app-header">
+    <div class="header-left">
+      <button class="icon-btn mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/ttsp-logo.png" alt="The Technologian" class="brand-logo">
+        <span class="brand-text">The Technologian</span>
+      </a>
+    </div>
+
+    <div class="header-center">
+      <div class="global-search">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" placeholder="Search..." class="global-search-input" aria-label="Global search">
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn notification-btn" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        <span class="notification-dot"></span>
+      </button>
+
+      <div class="user-profile" id="userProfile">
+        <button class="user-profile-trigger" aria-haspopup="true" aria-expanded="false">
+          <span class="avatar avatar-sm">JD</span>
+          <span class="user-info">
+            <span class="user-name">Juan Dela Cruz</span>
+            <span class="user-role">Web Development</span>
+          </span>
+          <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown-menu user-dropdown" role="menu">
+          <a href="#" class="dropdown-item" role="menuitem">Profile</a>
+          <a href="#" class="dropdown-item" role="menuitem">Settings</a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" role="menuitem">Sign out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link" data-nav="dashboard">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+            <span class="nav-label">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="newsroom.html" class="nav-link" data-nav="newsroom">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H8l-4 4V4z"/></svg>
+            <span class="nav-label">Newsroom</span>
+          </a>
+          <ul class="nav-sublist">
+            <li class="nav-item">
+              <a href="writing.html" class="nav-link nav-link-sub" data-nav="writing">
+                <span class="nav-label">Writing</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="creatives.html" class="nav-link nav-link-sub" data-nav="creatives">
+                <span class="nav-label">Creatives</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="online-digital.html" class="nav-link nav-link-sub is-active" data-nav="online-digital">
+                <span class="nav-label">Online &amp; Digital</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="requests.html" class="nav-link" data-nav="requests">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span class="nav-label">Requests</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="tasks.html" class="nav-link" data-nav="tasks">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M8 12l3 3 5-6"/></svg>
+            <span class="nav-label">Tasks</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="calendar.html" class="nav-link" data-nav="calendar">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+            <span class="nav-label">Calendar</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="notifications.html" class="nav-link" data-nav="notifications">
+            <svg class="nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="nav-label">Notifications</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+    <div class="digital">
+
+      <div class="digital-header">
+        <div>
+          <h1>Online &amp; Digital Cluster</h1>
+          <p class="digital-subtitle">Website, social, research, and multimedia — led by the Online &amp; Digital Head.</p>
+        </div>
+        <a href="newsroom.html" class="btn btn-secondary">Open Newsroom</a>
+      </div>
+
+      <section class="dash-section">
+        <div class="metric-grid" id="digitalMetrics"></div>
+      </section>
+
+      <section class="dash-section">
+        <div class="dash-section-header">
+          <h2>Digital Work Items</h2>
+          <div class="tabs" id="digitalTabs">
+            <button class="tab is-active" data-filter="all">All</button>
+            <button class="tab" data-filter="Website">Website</button>
+            <button class="tab" data-filter="Social">Social</button>
+            <button class="tab" data-filter="Research">Research</button>
+            <button class="tab" data-filter="Fact-Check">Fact-Check</button>
+            <button class="tab" data-filter="Multimedia">Multimedia</button>
+            <button class="tab" data-filter="Publishing">Publishing</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Assignee</th>
+                <th>Role</th>
+                <th>Linked Article</th>
+                <th>Status</th>
+                <th>Deadline</th>
+              </tr>
+            </thead>
+            <tbody id="digitalTableBody"></tbody>
+          </table>
+        </div>
+        <div class="empty-state" id="digitalEmptyState" hidden>
+          <p class="empty-state-title">No work items in this category</p>
+        </div>
+      </section>
+
+      <div class="digital-columns">
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Website Content</h2>
+          </div>
+          <div class="detail-list" id="websiteList"></div>
+        </section>
+
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Social Media Content</h2>
+          </div>
+          <div class="detail-list" id="socialList"></div>
+        </section>
+      </div>
+
+      <div class="digital-columns">
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Research</h2>
+          </div>
+          <div class="detail-list" id="researchList"></div>
+        </section>
+
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Fact-Checking</h2>
+          </div>
+          <div class="detail-list" id="factCheckList"></div>
+        </section>
+      </div>
+
+      <div class="digital-columns">
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Multimedia</h2>
+          </div>
+          <div class="detail-list" id="multimediaList"></div>
+        </section>
+
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Publishing Tasks</h2>
+          </div>
+          <div class="detail-list" id="publishingList"></div>
+        </section>
+      </div>
+
+      <div class="digital-columns">
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Digital Calendar</h2>
+          </div>
+          <ul class="event-list" id="digitalCalendar"></ul>
+        </section>
+
+        <section class="dash-section">
+          <div class="dash-section-header">
+            <h2>Team Roster</h2>
+          </div>
+          <div class="roster-grid" id="digitalRoster"></div>
+        </section>
+      </div>
+
+      <section class="dash-section">
+        <div class="dash-section-header">
+          <h2>Recent Activity</h2>
+        </div>
+        <ul class="activity-list" id="digitalActivityList"></ul>
+      </section>
+
+    </div>
+  </main>
+
+</div>
+
+<div class="modal-overlay" id="itemModalOverlay">
+  <div class="modal item-modal">
+    <div class="modal-header">
+      <div>
+        <h2 class="modal-title" id="itemModalTitle">Work Item</h2>
+        <p class="item-modal-subtitle" id="itemModalSubtitle"></p>
+      </div>
+      <button class="icon-btn" id="itemModalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="tabs modal-tabs" id="itemModalTabs">
+      <button class="tab is-active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="files">Files</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-tab-panel is-active" data-panel="overview" id="panelOverview"></div>
+      <div class="modal-tab-panel" data-panel="files" id="panelFiles"></div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/navigation.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/online-digital.js"></script>
+</body>
+</html>
