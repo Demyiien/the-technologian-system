@@ -299,7 +299,20 @@ function initStoryTabs() {
   });
 }
 
+// Initialize Quick Action Buttons
+function initQuickActions() {
+  const articleBtns = document.querySelectorAll('button[data-action="new-article"]');
+  const taskBtns = document.querySelectorAll('button[data-action="new-task"]');
+  const requestBtns = document.querySelectorAll('button[data-action="new-request"]');
+
+  // Redirect to respective module pages
+  articleBtns.forEach(btn => btn.addEventListener('click', () => window.location.href = 'writing.html'));
+  taskBtns.forEach(btn => btn.addEventListener('click', () => window.location.href = 'tasks.html'));
+  requestBtns.forEach(btn => btn.addEventListener('click', () => window.location.href = 'requests.html'));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initStoryTabs();
+  initQuickActions();
   fetchDashboardData();
 });

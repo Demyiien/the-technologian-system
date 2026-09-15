@@ -518,4 +518,10 @@ const workflowStages = [
     initTableClicks();
     initModal();
     openFromQueryString();
-  });
+    const newArticleBtns = document.querySelectorAll('button[data-action="new-article"]');
+    newArticleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            window.location.href = 'writing.html';
+        });
+    });
+});
